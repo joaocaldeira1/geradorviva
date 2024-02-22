@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Configura o arquivo CSS, o titulo e o icone da pagina -->
+        <title>VIVAPREV - Gerador de Assinaturas</title>
+        <link rel="stylesheet" type="text/css" href="../index.css" />
+        <link rel="shortcut icon" href="../assets/imgs/iconevivaass.jpg" type="image/x-icon">
+    </head>
+
+    <body>
+        <!-- Cria um wrapper "app" -->
+        <div class="app">
+            <!-- Cria um wrapper "content" -->
+            <div class="content">
+                <!-- Cria um cabecalho com a logo e o nome/slogan -->
+                <div class="header">
+                    <span>
+                        <img src="../assets/imgs/logotipo.png" class="assinaturaImagem" style="max-width: 400px" />
+                    </span>
+                    <h1 class="display-4">VIVA PREVIDÊNCIA 2022</h1>
+                    <p class="h2">Gerador de Assinatura</p>
+                </div>
+
+                <p class="titulo-bg">Selecione o selo de certificação profissional (caso tenha):</p>
+
+                <div class="seletor-de-bg">
+                    <a href="../index.html">Sem selo de certificação</a>
+                    <a href="index-cpa.html">CPA-20</a>
+                    <a href="index-icss.html">ICSS</a>
+                    <a href="index-2selo.html">ICSS + CPA-20</a>
+                </div>
+
+                <div class="forms">
+                    <!-- Cria um formulario para o usuario preencher -->
+                    <form>
+                        <!-- Cada campo e uma divisao com um texto (descricao) e uma entrada de texto <input> -->
+                        <!-- Cada <input> recebe um id, que e usado no script para pegar o que o usuario digitou -->
+                        <div class="form-input">
+                            <p><strong>Nome:</strong></p>
+                            <input type="text" id="nome" class="input-text" required placeholder="Nome + sobrenome de preferência"/>
+                        </div>
+                        <div class="form-input">
+                            <p><strong>Cargo:</strong></p>
+                            <input type="text" id="cargo" class="input-text" required placeholder="Cargo" />
+                        </div>
+                        <div class="form-input">
+                            <p><strong>Área:</strong></p>
+                            <input type="text" id="gerencia" class="input-text" placeholder="Gerência/coordenadoria" />
+                        </div>
+                        <div class="form-input">
+                            <p><strong>Telefone:</strong></p>
+                            <input type="text" id="telefone" class="input-text" required placeholder="(xx) x xxxx-xxxx"/>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="assinatura-wrapper">
+                    <!-- Cria a divisao que sera usada para copiar a assinatura -->
+                    <div class="assinatura-div" id="assinatura-div">
+                        <canvas id="idCanvas" width="685" height="181"></canvas>
+                    </div>
+                </div>
+
+                <!-- Cria divisao para o botao na parte de baixo -->
+                <div class="center-a">
+                    <a class="download-image" download="assinatura.png" href=""> Fazer Download </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configura o script com o codigo -->
+        <script src="index-2selo.js"></script>
+        
+        <footer>
+            <p>Desenvolvido por: João Florencio Caldeira & Pedro Henrique Hernandes da Silva</p>
+        </footer>
+    </body>
+</html>
