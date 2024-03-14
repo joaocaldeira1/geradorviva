@@ -43,32 +43,32 @@ function desenharImagem(name, cargo, gerencia, telefone) {
         context.fillStyle = "#3e3e3d";
 
         if(gerencia){
-            context.fillText(name, 90, 65, 335);
+            context.fillText(name, 88, 65, 335);
         } else {
             context.font = "29px Montserrat";
-            context.fillText(name, 90, 72, 335);
+            context.fillText(name, 88, 72, 335);
         }
 
         context.font = "17px Montserrat";
 
         if(gerencia){
-            context.fillText(cargo, 91, 85, 335);
+            context.fillText(cargo, 88, 85, 335);
         } else {
             context.font = "18px Montserrat";
-            context.fillText(cargo, 91, 94, 335);
+            context.fillText(cargo, 88, 94, 335);
         }
 
         context.font = "15px Montserrat";
         
-        context.fillText(gerencia, 91, 103, 335);
+        context.fillText(gerencia, 88, 103, 326);
 
         context.font = "16px Montserrat";
         
         if(gerencia){
-            context.fillText(telefone, 91, 122, 335);
+            context.fillText(telefone, 88, 122, 335);
         } else {
             context.font = "19px Montserrat"
-            context.fillText(telefone, 91, 117, 335);
+            context.fillText(telefone, 88, 117, 335);
         }
         
 
