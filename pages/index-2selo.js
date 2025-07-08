@@ -42,7 +42,7 @@ function desenharImagem(name, cargo, gerencia, telefone) {
         context.font = "26px Montserrat";
         context.fillStyle = "#3e3e3d";
 
-        if(gerencia){
+        if (gerencia) {
             context.fillText(name, 88, 65, 335);
         } else {
             context.font = "29px Montserrat";
@@ -51,7 +51,7 @@ function desenharImagem(name, cargo, gerencia, telefone) {
 
         context.font = "17px Montserrat";
 
-        if(gerencia){
+        if (gerencia) {
             context.fillText(cargo, 89, 85, 335);
         } else {
             context.font = "18px Montserrat";
@@ -59,18 +59,17 @@ function desenharImagem(name, cargo, gerencia, telefone) {
         }
 
         context.font = "15px Montserrat";
-        
+
         context.fillText(gerencia, 89, 103, 335);
 
         context.font = "16px Montserrat";
-        
-        if(gerencia){
+
+        if (gerencia) {
             context.fillText(telefone, 89, 122, 335);
         } else {
-            context.font = "19px Montserrat"
+            context.font = "19px Montserrat";
             context.fillText(telefone, 89, 117, 335);
         }
-        
 
         var canvas = document.getElementById("idCanvas");
         var dataURL = canvas.toDataURL();
@@ -82,6 +81,4 @@ function desenharImagem(name, cargo, gerencia, telefone) {
     imageObj.setAttribute("crossOrigin", "anonymous");
     // Esse é o atributo que você vai alterar para colocar a sua imagem de assinatura
     imageObj.src = "../assets/imgs/imgass2selos.jpg";
-
-    //imageObj.src = "https://raw.githubusercontent.com/Tashima42/Email-sign-generator/canvas/assets/imgs/assinatura-modelo.png";
 }
